@@ -1,10 +1,12 @@
 #!/bin/bash
-if [ -L $0 ];then
-	REAL_SCRIPT=`readlink $0`
+
+SYSTEM_INI_FILE=/etc/kaltura.d/system.ini
+if [ -r "$SYSTEM_INI_FILE" ];then
+    . $SYSTEM_INI_FILE
 else
-	REAL_SCRIPT=$0
+    echo "I could not source $SYSTEM_INI_FILE. Exiting."
+    exit 1
 fi
-. `dirname $REAL_SCRIPT`/../../app/configurations/system.ini
 
 KALTURA_BIN=$BASE_DIR/bin
 KALTURA_BIN_DIRS=$KALTURA_BIN
