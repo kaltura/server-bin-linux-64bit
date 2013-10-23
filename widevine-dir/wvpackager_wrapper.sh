@@ -14,6 +14,6 @@
 #===============================================================================
 
 #set -o nounset                              # Treat unset variables as an error
-LD_LIBRARY_PATH="$LD_LIBRARY_PATH:@bin_dir@/widevine-dir/lib/boost:@bin_dir@/widevine-dir/lib/widevine:@bin_dir@/ffmpeg-0.6-dir/lib"
+LD_LIBRARY_PATH="$LD_LIBRARY_PATH:@BIN_DIR@/widevine-dir/lib/boost:@BIN_DIR@/widevine-dir/lib/widevine:@BIN_DIR@/ffmpeg-0.6-dir/lib"
 export LD_LIBRARY_PATH
-@bin_dir@/widevine-dir/wvpackager $@
+@BIN_DIR@/widevine-dir/wvpackager $@
