@@ -1,0 +1,8 @@
+Compilation command line:
+	gcc -Wall -g segmenter.c -o segmenter -lavformat -lavcodec -lavutil -L../ffmpeg-bin-0.6/ -I~/transcode/ffmpeg-0.6
+	
+Notes:
+	Based on ffmpeg-0.6 libraries, as they are stored on "build server" (Amazon/Cnt4.7).
+	The library dir, in this cmd line "../ffmpeg-bin-0.6/", should contain either linked or copied non-versioned libs: 
+		libavformat.so, libavcodec.so, libavutil.so
+	
